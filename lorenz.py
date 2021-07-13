@@ -30,8 +30,8 @@ class lorenz:
     # Using The ConvertToScreen Function 
     def draw(self, displaysuface):
         width, height = displaysuface.get_size()
-        oldPos = self.ConvertToScreen(self.oX, self.oY, self.xMin, self.xMax, self.yMin, self.yMax, width, height)
-        newPos = self.ConvertToScreen(self.X, self.Y, self.xMin, self.xMax, self.yMin, self.yMax, width, height)
+        oldPos = self.ConvertToScreen(self.oX, self.oZ, self.xMin, self.xMax, self.zMin, self.zMax, width, height)
+        newPos = self.ConvertToScreen(self.X, self.Z, self.xMin, self.xMax, self.zMin, self.zMax, width, height)
 
         # Draw The current line segment. 
         newRect = pygame.draw.line(displaysuface, self.pixelcolour, oldPos, newPos, 2)
